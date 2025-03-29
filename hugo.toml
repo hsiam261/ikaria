@@ -1,0 +1,46 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Hello Ikaria'
+
+[markup]
+  [markup.highlight] # add line numbers in code editor
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # enable unsafe rendering for raw html embedding
+    [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
+
+[[params.menu]]
+name = "HOME"
+url = "/"
+
+[[params.menu]]
+name = "ARTICLES"
+url = "/articles"
+
+[[params.menu]]
+name = "NOTES"
+url = "/notes"
+
+[[params.menu]]
+name = "RECENT"
+url = "/recent"
+
+[[params.menu]]
+name = "LIBRARY"
+url = "/library"
+
+[[params.menu]]
+name = "ABOUT"
+url = "/about"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

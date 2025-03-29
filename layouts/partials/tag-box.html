@@ -1,0 +1,20 @@
+{{ $tags := .Site.Taxonomies.tags }}
+{{ $sortedTags := slice }}
+{{ range $tag, $pages := $tags }}
+    {{ $sortedTags = $sortedTags | append (dict "name" $tag "count" (len $pages)) }}
+{{ end }}
+
+{{ $sortedTags = sort $sortedTags "count" }}
+<div class="tag-box">
+    <h4>Tags</h4>
+    <div class="tags-tray">
+        {{ range first 10 $sortedTags }}
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/{{.name}}">{{ .name }}</a></div><div class="tag__count">{{ .count }}</div>
+            </div>
+        {{ end }}
+        <div class="tag">
+            <div class="see-all-tag"><a href="/tags/">See All >> </a></div>
+        </div>
+    </div>
+</div>

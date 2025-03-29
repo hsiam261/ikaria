@@ -1,0 +1,106 @@
+:root {
+    --show-first-block: block;
+    --show-last-block: none;
+    --block-background-color: #f8f8f8;
+    --code-block-header-color: hsl(from var(--block-background-color) h s calc(l - 10));
+    --code-block-button-hover-color: hsl(from var(--block-background-color) h s calc(l - 5));
+
+    --code-block-collapse-transition-time: 0.3s;
+}
+
+.darkmode {
+    --show-first-block: none;
+    --show-last-block: block;
+    --block-background-color: #282c34;
+    --code-block-header-color: hsl(from var(--block-background-color) h s calc(l + 10));
+    --code-block-button-hover-color: hsl(from var(--block-background-color) h s calc(l + 5));
+}
+
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--code-block-header-color);
+    padding: 8px 8px 8px 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.code-block-header__button-tray {
+    display: flex;
+    gap: 10px;
+}
+
+.code-block-header__button-tray button {
+    border: 0px;
+    background-color: var(--code-block-header-color);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    color: var(--text-color);
+}
+
+.code-block-header__button-tray button:hover {
+    background-color: var(--code-block-button-hover-color);
+}
+
+.code-block-header__button-tray svg {
+    fill: var(--text-color);
+}
+
+.code-block__copy svg{
+    height: 1em;
+    width: 1em;
+}
+
+.code-block__collapse svg{
+    height: 1em;
+}
+
+.code-block-expandible {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 0fr;
+    min-height: 0px;
+    transition: grid-template-rows var(--code-block-collapse-transition-time) ease-out;
+}
+
+.code-block-expandible--open {
+    grid-template-rows: 1fr;
+}
+
+.code-block-wrapper {
+    padding: 0px;
+    overflow-x: scroll;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--block-background-color);
+}
+
+.code-block-wrapper code:first-child {
+    display: var(--show-first-block);
+}
+
+.code-block-wrapper code:last-child {
+    display: var(--show-last-block);
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+}
+
+.chroma {
+    display: flex;
+}
+
+.chroma code {
+    padding: 1em 1em 1em 1em;
+}
+
+.code-block__collapse-icon {
+    transition: transform var(--code-block-collapse-transition-time);
+}
+
+.code-block__collapse-icon--collapsed {
+    transform: rotate(90deg);
+}

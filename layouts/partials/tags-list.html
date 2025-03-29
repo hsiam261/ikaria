@@ -1,0 +1,22 @@
+{{ $tags := .Site.Taxonomies.tags }}
+{{ $sortedTags := slice }}
+{{ range $tag, $pages := $tags }}
+    {{ $sortedTags = $sortedTags | append (dict "name" $tag "count" (len $pages)) }}
+{{ end }}
+
+{{ $sortedTags = sort $sortedTags "name" }}
+
+<div class="post">
+    <div class="post__title">
+        <h1> Tags </h1>
+    </div>
+
+    <div class="post__content" style="display: flex;">
+        {{ range $sortedTags }}
+            <div class="tag" style="margin: 0.3em;">
+                <div class="tag__name"><a href="/tags/{{.name}}">{{ .name }}</a></div><div class="tag__count">{{ .count }}</div>
+            </div>
+        {{ end }}
+    </div>
+
+</div>

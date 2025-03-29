@@ -1,0 +1,102 @@
+:root {
+    --post-entry-header-color: #3273dc;
+    --post-list-button-color: white;
+    --post-list-selected-button-color: #3273dc;
+    --post-list-button-text-color: #363636;
+    --post-list-selected-button-text-color: white;
+}
+
+.darkmode {
+    --post-entry-header-color: #5299e0;
+    --post-list-button-color: #373d48;
+    --post-list-selected-button-color: #434a56;
+    --post-list-button-text-color: #c0c0c0;
+    --post-list-selected-button-text-color: white;
+}
+
+.post__entry .post__title h1 {
+    color: var(--post-entry-header-color);
+    cursor: pointer;
+}
+
+.post__entry .post__title h1 a {
+    color: var(--post-entry-header-color);
+}
+
+.post__entry {
+    background-color: var(--panel-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+.main {
+    background-color: var(--background-color);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+.post-list {
+    padding: 0px;
+}
+
+.page-list-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.page-list-buttons {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-list-buttons__page-button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--post-list-button-color);
+    color: var(--post-list-button-text-color);
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-list-buttons__page-button--selected {
+    background-color: var(--post-list-selected-button-color);
+    color: var(--post-list-selected-button-text-color);
+}
+
+.page-list-buttons__previous, .page-list-buttons__next {
+    height: 2rem;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--panel-color);
+    background-color: var(--post-list-button-color);
+    padding: 5px;
+    color: var(--post-list-button-text-color);
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-list-buttons__previous, .page-list-buttons__next a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.page-list-buttons__tray {
+    display: flex;
+    gap: 10px;
+}
+
+.page-list-buttons__elipsis-disabled {
+    display: none;
+}

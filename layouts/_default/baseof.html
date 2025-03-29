@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="root" id="root">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+    <div class="container">
+      {{ partial "aside.html" . }}
+      <main class="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+    {{ end }}
+    <footer class="footer">
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+</html>

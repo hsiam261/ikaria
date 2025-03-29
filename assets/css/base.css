@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --base: #f7f7f7;
+    --panel-color: white;
+    --text-color: #363636;
+    --text-hover-color: hsl(from rgb(0, 130, 255) h s calc(l - 10));
+    --icon-fill: black;
+    --icon-hover-color: hsl(from var(--panel-color) h s calc(l - 10));
+}
+
+.darkmode {
+    --base: #0E1225;
+    --panel-color:  #1b1f2c;
+    --text-color: #c0c0c0;
+    --text-hover-color: hsl(from var(--text-color) h s calc(l + 10));
+    --icon-fill: white;
+    --icon-hover-color: hsl(from var(--panel-color) h s calc(l + 10));
+}

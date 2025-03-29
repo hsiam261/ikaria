@@ -1,0 +1,17 @@
+<div class="post autonumber">
+    {{ if and (not (index .Params "disableTitle" | default false)) .Title }}
+    <div class="post__title">
+        <h1> {{ .Title }} </h1>
+    </div>
+    {{ end }}
+
+    {{ if (not (index .Params "disableMetadata" | default false)) }}
+    {{ partial "post-metadata" . }}
+    {{ end }}
+    <div class="post__content">
+        {{ page.Content }}
+    </div>
+    {{ if (not (index .Params "disableTags" | default false)) }}
+    {{ partial "post-tags.html" . }}
+    {{ end }}
+</div>

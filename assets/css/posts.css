@@ -1,0 +1,111 @@
+.post {
+    background-color: var(--panel-color);
+    color: var(--text-color);
+}
+
+.post__content p {
+    line-height: 1.5;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+/* .post__content .highlight {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.post__content .highlight pre {
+    padding: 1.5em;
+}
+
+.post__content .highlight pre::before {
+    content: "<div> Hello World </div>;
+} */
+
+.highlight {
+    margin: 1.5em;
+}
+
+
+.post__title a {
+    text-decoration: none;
+}
+
+.post__content h1 {
+    margin-bottom: 20px;
+}
+
+.post__content h2 {
+    margin-bottom: 10px;
+}
+
+.post__content h3 {
+    margin-bottom: 5px;
+}
+
+.post__content ul, ol {
+    list-style-position: inside;
+    margin: 0.5em;
+    margin-left: 2em;
+}
+
+.post__content ::marker {
+    font-weight: 500;
+}
+
+.post__tags svg {
+    width: 1em;
+    fill: var(--icon-fill); /* Default light mode */
+    transition: fill 0.3s ease;
+    position: relative;
+    top: 2px;
+}
+
+.post__tags a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.darkmode .post__content a {
+    color: var(--text-color);
+}
+
+.post__tags hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post__metadata{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.post__metadata-entry {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.post__metadata--entry svg {
+    fill: var(--icon-fill); /* Default light mode */
+    transition: fill 0.3s ease;
+}
+
+.post__metadata--calender-icon {
+    width: 1em;
+    position: relative;
+    top: 2px;
+}
+
+.post__metadata--folder-icon {
+    width: 1.2em;
+    position: relative;
+    top: 3px;
+}
+
+
+.post__title {
+    margin-bottom: 15px;
+}

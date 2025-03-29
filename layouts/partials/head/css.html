@@ -1,0 +1,50 @@
+{{-
+  $base_files := slice
+  (resources.Get "css/base.css")
+  (resources.Get "css/layout.css")
+  (resources.Get "css/card.css")
+  (resources.Get "css/tag-box.css")
+  (resources.Get "css/nav.css")
+  (resources.Get "css/posts.css")
+  (resources.Get "css/autonumber.css")
+  (resources.Get "css/code-block.css")
+-}}
+
+{{ $combined_name := "assets/base.css" }}
+
+
+{{ if (or (eq .Kind "section") (eq .Kind "term")) }}
+  {{ $base_files = ($base_files | append (resources.Get "css/post-list.css")) }}
+  {{ $combined_name = "assets/list.css" }}
+{{ end }}
+
+
+{{-
+  $combined := $base_files
+  | resources.Concat $combined_name
+  | minify
+  | fingerprint
+}}
+
+<script>
+  console.log('{{ $combined}}')
+  console.log('{{ $combined_name }}')
+
+</script>
+
+
+
+{{ if (eq .Kind "section") }}
+<script>
+  console.log('{{.Kind}}');
+</script>
+{{ $base_files = ($base_files | append (resources.Get "css/post-list.css")) }}
+{{ end }}
+
+{{- if eq hugo.Environment "development" }}
+  {{- range $css_file := $base_files}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- end }}
+{{- else }}
+  <link rel="stylesheet" href="{{ $combined.RelPermalink }}" integrity="{{ $combined.Data.Integrity }}" crossorigin="anonymous">
+{{- end }}

@@ -1,0 +1,57 @@
+{{ $paginator := .Paginator }}
+<div class="post-list">
+    {{ range $paginator.Pages }}
+    <div class="post__entry">
+
+        <div class="post__title">
+            <h1><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h1>
+        </div>
+        {{ if (not (index .Params "disableMetadata" | default false)) }}
+        {{ partial "post-metadata.html" . }}
+        {{ end }}
+        <div class="post__content">
+            {{ .Summary }}
+        </div>
+        {{ if (not (index .Params "disableTags" | default false)) }}
+        {{ partial "post-tags.html" . }}
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+
+
+{{- $pageListButtonDisplayStyle := "center" }}
+{{- $previousButtonDisplayStyle := "" }}
+{{ if not $paginator.HasPrev }}
+{{- $previousButtonDisplayStyle = "display: none;" }}
+{{ end }}
+
+{{- $nextButtonDisplayStyle := "" }}
+{{ if not $paginator.HasNext }}
+{{- $nextButtonDisplayStyle = "display: none;" }}
+{{ end }}
+
+
+<div class="page-list-buttons">
+    {{ if $paginator.HasPrev }}
+    <button class="page-list-buttons__previous">
+        <a href="{{ $paginator.Prev.URL }}">Previous</a>
+    </button>
+    {{ else }}
+    <button class="page-list-buttons__previous" style="pointer-events: none; opacity: 0;">
+        Previous
+    </button>
+    {{ end }}
+
+    Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+
+    {{ if $paginator.HasNext }}
+    <button class="page-list-buttons__next">
+        <a href="{{ $paginator.Next.URL }}">Next</a>
+    </button>
+    {{ else }}
+    <button class="page-list-buttons__next" style="pointer-events: none; opacity: 0;">
+        Next
+    </button>
+    {{ end }}
+</div>

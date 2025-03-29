@@ -1,0 +1,81 @@
+:root {
+    --tag-box-tag-color: #3273dc;
+    --tag-count-color: #ededed;
+    --tag-text-color: white;
+    --tag-count-text-color: #363636;
+}
+
+.darkmode {
+    --tag-count-color: #373d48;
+    --tag-count-text-color: #c0c0c0;
+}
+
+.tag {
+    display: flex;
+}
+
+.tag-box {
+    background-color: var(--panel-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 5px;
+    color: var(--text-color);
+}
+
+.tag__name {
+    background-color: var(--tag-box-tag-color);
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: var(--tag-text-color);
+    font-size: 0.8rem;
+}
+
+.tag__name a {
+    color: var(--tag-text-color);
+    text-decoration: none;
+}
+
+.see-all-tag a {
+    color: var(--tag-text-color);
+    text-decoration: none;
+}
+
+
+
+
+.tag__count {
+    background-color: var(--tag-count-color);
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--tag-count-text-color);
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags-tray {
+    display: flex;
+    flex-wrap:wrap;
+    row-gap: 8px;
+    margin-top: 20px;
+    column-gap: 8px;
+}
+
+.see-all-tag {
+    background-color: var(--tag-box-tag-color);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--tag-text-color);
+    font-size: 0.8rem;
+}
+
+.post .tag__name a {
+    color: var(--tag-text-color);
+    text-decoration: none;
+}

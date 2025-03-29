@@ -1,0 +1,29 @@
+.autonumber {
+    counter-reset: h2-counter 0;
+}
+
+.autonumber h2 {
+    counter-increment: h2-counter;
+    counter-reset: h3-counter 0;
+}
+
+.autonumber h3 {
+    counter-increment: h3-counter;
+    counter-reset: h4-counter 0;
+}
+
+.autonumber h4 {
+    counter-increment: h4-counter;
+}
+
+.autonumber h2:before {
+    content: counter(h2-counter) ". ";
+}
+
+.autonumber h3:before {
+    content: counter(h2-counter) "." counter(h3-counter) ". ";
+}
+
+.autonumber h4:before {
+    content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+}

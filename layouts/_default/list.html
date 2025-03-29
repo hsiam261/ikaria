@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ if (or (eq .Kind "section") (eq .Kind "term")) }}
+    {{ partial "post-list.html" . }}
+  {{ else }}
+    {{ partial "tags-list.html" . }}
+  {{ end }}
+{{ end }}
