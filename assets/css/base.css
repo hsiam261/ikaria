@@ -12,6 +12,7 @@
     --text-hover-color: hsl(from rgb(0, 130, 255) h s calc(l - 10));
     --icon-fill: black;
     --icon-hover-color: hsl(from var(--panel-color) h s calc(l - 10));
+    --hyperlink-color: #3273dc;
 }
 
 .darkmode {
@@ -21,4 +22,5 @@
     --text-hover-color: hsl(from var(--text-color) h s calc(l + 10));
     --icon-fill: white;
     --icon-hover-color: hsl(from var(--panel-color) h s calc(l + 10));
+    --hyperlink-color: #3273dc;
 }

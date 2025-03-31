@@ -4,15 +4,13 @@
         <p>{{ site.Title }}</p></a>
     </div>
     <div class="nav__links">
-        <ul>
         {{ $currentPage := . }}
 
         {{ with site.Params.menu }}
         {{ range . }}
-            <li><a href="{{ .url }}" {{ if and (isset . "newTab") .newTab }}target="_blank" rel="noopener noreferrer"{{ end }}><button> {{ .name }} </button></a></li>
+            <button><a href="{{ .url }}" {{ if and (isset . "newTab") .newTab }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ .name }}</a></button>
         {{ end }}
         {{ end }}
-        </ul>
     </div>
     <div class="nav__icon-tray">
         <button class="nav__icon" id="darkmode-toggle">

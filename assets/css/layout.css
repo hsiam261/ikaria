@@ -19,6 +19,7 @@ body {
     justify-content: center;
     background-color: var(--base);
     width: 100%;
+    align-items: flex-start;
 }
 
 
@@ -35,7 +36,6 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 100%;
-    overflow-x: scroll;
 }
 
 /* .main p {
@@ -56,9 +56,9 @@ body {
     padding: 0.5em;
 }
 
-.footer a {
+a {
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--hyperlink-color);
 }
 
 .footer p {

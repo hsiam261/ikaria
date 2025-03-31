@@ -1,4 +1,9 @@
-<div class="post autonumber">
+{{ $postClass := "post" }}
+{{- if not (index .Params "disableSectionNumbering" | default false) }}
+{{ $postClass = printf "%s %s" $postClass "autonumber" }}
+{{ end }}
+
+<div class="{{ $postClass }}">
     {{ if and (not (index .Params "disableTitle" | default false)) .Title }}
     <div class="post__title">
         <h1> {{ .Title }} </h1>
