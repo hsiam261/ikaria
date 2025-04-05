@@ -10,7 +10,7 @@
     --tag-count-text-color: #c0c0c0;
 }
 
-.tag {
+.tag:not(.katex .tag) {
     display: flex;
 }
 
