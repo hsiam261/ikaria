@@ -3,7 +3,7 @@ A simple modern theme for generating responsive websites with [hugo](https://goh
 ipads:
 <p align="center">
   <img src="https://raw.githubusercontent.com/hsiam261/ikaria/master/screenshots/ipad-light.png?raw=true" width="45%">
-  <img src="https://raw.githubusercontent.com/hsiam261/ikaria/main//screenshots/ipad-dark.png" width="45%">
+  <img src="https://githubusercontent.com/hsiam261/ikaria/master/screenshots/ipad-dark.png?raw=true" width="45%">
 </p>
 
 ![Hello](screenshots/ipad-dark.png)
