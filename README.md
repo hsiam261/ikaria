@@ -16,7 +16,7 @@ phones:
 
 desktop:
 <p align="center">
-  <img src="screenshots/big-light.png" width="45%">
+  <img src="screenshots/big-light.png?raw=true" width="45%">
   <img src="screenshots/big-dark.png" width="45%">
 </p>
 
