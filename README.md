@@ -2,20 +2,20 @@
 A simple modern theme for generating responsive websites with [hugo](https://gohugo.io/).
 ipads:
 <p align="center">
-  <img src="screenshots/ipad-light.png" width="45%">
-  <img src="screenshots/ipad-dark.png" width="45%">
+  <img src="screenshots/ipad-light.png?raw=true" width="45%">
+  <img src="screenshots/ipad-dark.png?raw=true" width="45%">
 </p>
 
 phones:
 <p align="center">
-  <img src="screenshots/phone-light.png" width="45%">
-  <img src="screenshots/phone-dark.png" width="45%">
+  <img src="screenshots/phone-light.png?raw=true" width="45%">
+  <img src="screenshots/phone-dark.png?raw=true" width="45%">
 </p>
 
 desktop:
 <p align="center">
-  <img src="screenshots/big-light.png" width="45%">
-  <img src="screenshots/big-dark.png" width="45%">
+  <img src="screenshots/big-light.png?raw=true" width="45%">
+  <img src="screenshots/big-dark.png?raw=true" width="45%">
 </p>
 
 Ikaria was originally inspired from the hexo theme icarus. However, it is not an icarus clone. It neither tries to fully replicate icarus visually nor have full feature parity.
