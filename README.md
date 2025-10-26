@@ -2,9 +2,11 @@
 A simple modern theme for generating responsive websites with [hugo](https://gohugo.io/).
 ipads:
 <p align="center">
-  <img src="screenshots/ipad-light.png" width="45%">
-  <img src="screenshots/ipad-dark.png" width="45%">
+  <img src="https://raw.githubusercontent.com/hsiam261/ikaria/master/screenshots/ipad-light.png?raw=true" width="45%">
+  <img src="https://raw.githubusercontent.com/hsiam261/ikaria/main//screenshots/ipad-dark.png" width="45%">
 </p>
+
+![Hello](screenshots/ipad-dark.png)
 
 phones:
 <p align="center">
